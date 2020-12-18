@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-3">
+    <div class="row" style="margin-top: 13px;">
+      <div class="center">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" height="150" width="150" class="mx-auto d-block rounded-circle mt-20" alt="...">
+      </div>
+    </div>
+
+    <button *ngIf="isLogged"  type="button" routerLink="/my-profile" class="w-100 btn btn-dark text-center" style="margin-top: 13px;" >Edit Profile</button>
+
+    <ul class="list-group"  style="margin-top: 13px;">
+      <li class="list-group-item">
+        <label><strong>Name:</strong></label>
+        <br>
+        {{userProfile.Name}}
+      </li>
+      <li class="list-group-item">
+        <label><strong>Job Title:</strong></label>
+        <br>
+        {{userProfile.JobTitle}}
+      </li>
+      <li class="list-group-item">
+        <label><strong>Email:</strong></label>
+        <br>
+        {{userProfile.Email}}
+      </li>
+      <li class="list-group-item">
+        <label><strong>Mobile No.:</strong></label>
+        <br>
+        {{userProfile.MobileNumber}}
+      </li>
+    </ul>
+
+  </div>
+  <div class="col">
+    <div class="p-3">
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
